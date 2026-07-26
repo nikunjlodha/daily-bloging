@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everyday Vibes — Lifestyle, Stories & Daily Moments</title>
+  <meta name="description"
+    content="A cozy corner for daily blogs, travel diaries, food adventures, motivation, and lifestyle stories. Simple, aesthetic, and full of good vibes." />
+  <meta name="keywords"
+    content="lifestyle blog, daily vlogs, travel, food, motivation, fun facts, stories, everyday life" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" id="nav-logo-link">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Everyday Vibes</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#featured" class="nav-link active">Home</a></li>
+        <li><a href="#categories" class="nav-link">Explore</a></li>
+        <li><a href="#stories" class="nav-link">Stories</a></li>
+        <li><a href="#vibes" class="nav-link">Vibes</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="search-btn" id="search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="#newsletter" class="nav-cta">Subscribe ✨</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== SEARCH OVERLAY ========== -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search stories, vibes, places…" autocomplete="off" />
+      <button id="search-close" aria-label="Close search">✕</button>
+    </div>
+    <div class="search-tags">
+      <span class="stag" data-filter="travel">🌍 Travel</span>
+      <span class="stag" data-filter="food">☕ Food & Café</span>
+      <span class="stag" data-filter="motivation">✨ Motivation</span>
+      <span class="stag" data-filter="lifestyle">🌿 Lifestyle</span>
+      <span class="stag" data-filter="trending">🔥 Trending</span>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero_lifestyle.png" alt="Cozy lifestyle hero" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up">
+        <span class="badge-dot"></span>
+        <span>New post every day</span>
+      </div>
+      <h1 class="hero-title animate-fade-up delay-1">
+        Life is beautiful,<br />
+        <em>one moment at a time.</em>
+      </h1>
+      <p class="hero-sub animate-fade-up delay-2">
+        Daily stories, cozy vibes, travel diaries, café moments, and everything in between — curated just for you. 🌸
+      </p>
+      <div class="hero-actions animate-fade-up delay-3">
+        <a href="#featured" class="btn-primary" id="explore-btn">Start Exploring</a>
+        <a href="#about" class="btn-ghost">Meet the Creator</a>
+      </div>
+      <div class="hero-stats animate-fade-up delay-4">
+        <div class="stat"><strong>12k+</strong><span>Readers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>340+</strong><span>Stories</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>Daily</strong><span>New Posts</span></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE TICKER ========== -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>☀️ Good morning, beautiful soul!</span>
+      <span>✈️ Wanderlust is calling — pack your bags</span>
+      <span>☕ Coffee + good vibes = perfect morning</span>
+      <span>🌸 New travel diary: Coorg, Karnataka</span>
+      <span>🔥 Trending: 5 morning habits that changed my life</span>
+      <span>🍜 Try this 15-min pasta recipe tonight</span>
+      <span>💫 Motivation Monday: You've got this!</span>
+      <span>📸 Vlog drops every Friday</span>
+      <span>🌿 Weekend recipe: Matcha Latte at home</span>
+      <span>☀️ Good morning, beautiful soul!</span>
+      <span>✈️ Wanderlust is calling — pack your bags</span>
+      <span>☕ Coffee + good vibes = perfect morning</span>
+      <span>🌸 New travel diary: Coorg, Karnataka</span>
+      <span>🔥 Trending: 5 morning habits that changed my life</span>
+    </div>
+  </div>
+
+  <!-- ========== CATEGORY PILLS ========== -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-label">Browse by Vibe</div>
+      <div class="cat-pills">
+        <button class="cat-pill active" data-cat="all" id="cat-all">✨ All</button>
+        <button class="cat-pill" data-cat="travel" id="cat-travel">🌍 Travel</button>
+        <button class="cat-pill" data-cat="food" id="cat-food">☕ Food & Café</button>
+        <button class="cat-pill" data-cat="lifestyle" id="cat-lifestyle">🌿 Lifestyle</button>
+        <button class="cat-pill" data-cat="motivation" id="cat-motivation">💫 Motivation</button>
+        <button class="cat-pill" data-cat="trending" id="cat-trending">🔥 Trending</button>
+        <button class="cat-pill" data-cat="funfact" id="cat-funfact">🧩 Fun Facts</button>
+        <button class="cat-pill" data-cat="vlog" id="cat-vlog">🎬 Vlog</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED CARDS ========== -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Featured Stories</div>
+          <h2 class="section-title">Today's Best Reads</h2>
+        </div>
+        <a href="#stories" class="see-all-link">See all →</a>
+      </div>
+
+      <div class="cards-grid" id="cards-grid">
+
+        <!-- Card 1: Travel -->
+        <article class="card card-large" data-cat="travel" id="card-travel-1">
+          <div class="card-img-wrap">
+            <img src="assets/card_travel.png" alt="Mountain travel at golden sunset" class="card-img" loading="lazy" />
+            <span class="card-badge travel">🌍 Travel</span>
+            <div class="card-overlay-actions">
+              <button class="card-like" aria-label="Like" id="like-travel-1">♡</button>
+              <button class="card-save" aria-label="Save" id="save-travel-1">🔖</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <img src="assets/avatar_author.png" alt="Author Rajat" class="card-avatar" />
+              <span class="card-author">Rajat Sharma</span>
+              <span class="card-dot">·</span>
+              <span class="card-date">July 23, 2026</span>
+            </div>
+            <h3 class="card-title">I Quit My Job & Spent 10 Days in the Himalayas — Here's What I Found</h3>
+            <p class="card-excerpt">Sometimes the mountains call you louder than your alarm clock. I answered. This is
+              what happened when I traded my office chair for mountain trails...</p>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag">Himalayas</span>
+                <span class="tag">Solo Travel</span>
+              </div>
+              <span class="card-read-time">5 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Food -->
+        <article class="card" data-cat="food" id="card-food-1">
+          <div class="card-img-wrap">
+            <img src="assets/card_food.png" alt="Aesthetic brunch spread" class="card-img" loading="lazy" />
+            <span class="card-badge food">☕ Food</span>
+            <div class="card-overlay-actions">
+              <button class="card-like" aria-label="Like" id="like-food-1">♡</button>
+              <button class="card-save" aria-label="Save" id="save-food-1">🔖</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <img src="assets/avatar_author.png" alt="Author Rajat" class="card-avatar" />
+              <span class="card-author">Rajat Sharma</span>
+              <span class="card-dot">·</span>
+              <span class="card-date">July 24, 2026</span>
+            </div>
+            <h3 class="card-title">The Perfect Saturday Brunch — Avocado Toast, Matcha & Good Mornings</h3>
+            <p class="card-excerpt">Slow mornings are the best mornings. Here's my go-to brunch spread that feels fancy
+              but takes under 20 minutes...</p>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag">Brunch</span>
+                <span class="tag">Recipes</span>
+              </div>
+              <span class="card-read-time">3 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Vlog/Lifestyle -->
+        <article class="card" data-cat="vlog" id="card-vlog-1">
+          <div class="card-img-wrap">
+            <img src="assets/card_vlog.png" alt="Cozy morning vlog" class="card-img" loading="lazy" />
+            <span class="card-badge vlog">🎬 Vlog</span>
+            <div class="card-play-btn">▶</div>
+            <div class="card-overlay-actions">
+              <button class="card-like" aria-label="Like" id="like-vlog-1">♡</button>
+              <button class="card-save" aria-label="Save" id="save-vlog-1">🔖</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <img src="assets/avatar_author.png" alt="Author Rajat" class="card-avatar" />
+              <span class="card-author">Rajat Sharma</span>
+              <span class="card-dot">·</span>
+              <span class="card-date">July 25, 2026</span>
+            </div>
+            <h3 class="card-title">My 6 AM Cozy Morning Routine (Rain Day Edition) ☁️</h3>
+            <p class="card-excerpt">Rainy mornings are made for warm blankets, hot coffee, and absolutely nothing
+              urgent. Come spend a slow morning with me...</p>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag">Morning Routine</span>
+                <span class="tag">Cozy</span>
+              </div>
+              <span class="card-read-time">7 min watch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Motivation -->
+        <article class="card" data-cat="motivation" id="card-motivation-1">
+          <div class="card-img-wrap">
+            <img src="assets/card_motivation.png" alt="Journaling for motivation" class="card-img" loading="lazy" />
+            <span class="card-badge motivation">💫 Motivation</span>
+            <div class="card-overlay-actions">
+              <button class="card-like" aria-label="Like" id="like-motivation-1">♡</button>
+              <button class="card-save" aria-label="Save" id="save-motivation-1">🔖</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <img src="assets/avatar_author.png" alt="Author Rajat" class="card-avatar" />
+              <span class="card-author">Rajat Sharma</span>
+              <span class="card-dot">·</span>
+              <span class="card-date">July 22, 2026</span>
+            </div>
+            <h3 class="card-title">5 Tiny Habits That Quietly Changed Everything For Me</h3>
+            <p class="card-excerpt">No big dramatic life overhaul. Just five small, doable things I started doing and
+              never looked back. Start with just one...</p>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag">Self-Growth</span>
+                <span class="tag">Daily Habits</span>
+              </div>
+              <span class="card-read-time">4 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Trending -->
+        <article class="card" data-cat="trending" id="card-trending-1">
+          <div class="card-img-wrap">
+            <img src="assets/card_trending.png" alt="Trendy lifestyle items" class="card-img" loading="lazy" />
+            <span class="card-badge trending">🔥 Trending</span>
+            <div class="card-overlay-actions">
+              <button class="card-like" aria-label="Like" id="like-trending-1">♡</button>
+              <button class="card-save" aria-label="Save" id="save-trending-1">🔖</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <img src="assets/avatar_author.png" alt="Author Rajat" class="card-avatar" />
+              <span class="card-author">Rajat Sharma</span>
+              <span class="card-dot">·</span>
+              <span class="card-date">July 25, 2026</span>
+            </div>
+            <h3 class="card-title">The "Quiet Luxury" Trend & Why Everyone Is Obsessed Right Now</h3>
+            <p class="card-excerpt">Understated. Elegant. Effortless. The quiet luxury aesthetic is everywhere this year
+              and honestly? I'm completely here for it...</p>
+            <div class="card-footer">
+              <div class="card-tags">
+                <span class="tag">Trends</span>
+                <span class="tag">Aesthetic</span>
+              </div>
+              <span class="card-read-time">3 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Fun Fact -->
+        <article class="card card-funfact" data-cat="funfact" id="card-funfact-1">
+          <div class="funfact-inner">
+            <div class="funfact-emoji">🧩</div>
+            <div class="funfact-label">Fun Fact of the Day</div>
+            <h3 class="funfact-text">Honey never spoils. Archaeologists found 3000-year-old honey in Egyptian tombs —
+              and it was still perfectly edible! 🍯</h3>
+            <div class="funfact-share">
+              <button class="share-pill" id="share-funfact-1">Share this ✨</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUOTE BANNER ========== -->
+  <section class="quote-section" id="vibes">
+    <div class="quote-bg"></div>
+    <div class="container quote-inner">
+      <div class="quote-deco">"</div>
+      <blockquote class="quote-text" id="quote-display">
+        Life isn't about finding yourself. It's about creating yourself, one beautiful day at a time.
+      </blockquote>
+      <cite class="quote-author" id="quote-author-display">— Unknown</cite>
+      <button class="quote-refresh-btn" id="new-quote-btn">New Vibe ✨</button>
+    </div>
+  </section>
+
+  <!-- ========== STORIES SECTION ========== -->
+  <section class="stories-section" id="stories">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-label">Instagram Stories Style</div>
+          <h2 class="section-title">Daily Story Drops 📸</h2>
+        </div>
+      </div>
+      <div class="stories-row" id="stories-row">
+        <div class="story-bubble" id="story-1">
+          <div class="story-ring"></div>
+          <img src="assets/card_travel.png" alt="Travel story" class="story-img" />
+          <span class="story-label">🌍 Travel</span>
+        </div>
+        <div class="story-bubble" id="story-2">
+          <div class="story-ring"></div>
+          <img src="assets/card_food.png" alt="Food story" class="story-img" />
+          <span class="story-label">☕ Brunch</span>
+        </div>
+        <div class="story-bubble" id="story-3">
+          <div class="story-ring"></div>
+          <img src="assets/card_vlog.png" alt="Vlog story" class="story-img" />
+          <span class="story-label">🎬 Vlog</span>
+        </div>
+        <div class="story-bubble" id="story-4">
+          <div class="story-ring"></div>
+          <img src="assets/card_motivation.png" alt="Motivation story" class="story-img" />
+          <span class="story-label">💫 Inspo</span>
+        </div>
+        <div class="story-bubble" id="story-5">
+          <div class="story-ring"></div>
+          <img src="assets/card_trending.png" alt="Trending story" class="story-img" />
+          <span class="story-label">🔥 Trending</span>
+        </div>
+        <div class="story-bubble" id="story-6">
+          <div class="story-ring viewed"></div>
+          <img src="assets/hero_lifestyle.png" alt="Lifestyle story" class="story-img" />
+          <span class="story-label">🌿 Vibes</span>
+        </div>
+      </div>
+
+      <!-- Story Modal -->
+      <div class="story-modal" id="story-modal">
+        <div class="story-modal-inner">
+          <div class="story-progress-bar">
+            <div class="story-progress-fill" id="story-progress-fill"></div>
+          </div>
+          <button class="story-close" id="story-close">✕</button>
+          <img class="story-full-img" id="story-modal-img" src="" alt="Story" />
+          <div class="story-modal-label" id="story-modal-label"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about-section" id="about">
+    <div class="container about-inner">
+      <div class="about-img-wrap">
+        <img src="assets/avatar_author.png" alt="Rajat Sharma, creator of Everyday Vibes" class="about-img" />
+        <div class="about-img-deco">✦</div>
+      </div>
+      <div class="about-content">
+        <div class="section-label">Meet the Creator</div>
+        <h2 class="section-title">Hey, I'm Rajat! 👋</h2>
+        <p class="about-bio">
+          I'm a lifestyle creator who believes every ordinary day holds something worth sharing. From morning coffee
+          rituals to impromptu road trips — I document the little joys of life here.
+        </p>
+        <p class="about-bio">
+          Whether it's a new recipe I tried, a place I fell in love with, or just thoughts on a rainy afternoon — this
+          is my cozy little corner of the internet. Glad you're here! 🌸
+        </p>
+        <div class="about-socials">
+          <a href="#" class="social-pill" id="social-instagram">📸 Instagram</a>
+          <a href="#" class="social-pill" id="social-youtube">🎬 YouTube</a>
+          <a href="#" class="social-pill" id="social-pinterest">📌 Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container newsletter-inner">
+      <div class="newsletter-emoji">💌</div>
+      <h2 class="newsletter-title">Get Good Vibes in Your Inbox</h2>
+      <p class="newsletter-sub">Weekly posts, behind-the-scenes moments, exclusive recipes & stories — delivered every
+        Sunday morning. ☕</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="your@email.com" required class="newsletter-input" />
+        <button type="submit" class="btn-primary" id="newsletter-submit">Subscribe ✨</button>
+      </form>
+      <p class="newsletter-note">No spam, ever. Unsubscribe anytime. 🌿</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo"><span class="logo-icon">✦</span><span class="logo-text">Everyday Vibes</span></a>
+        <p class="footer-tagline">Finding beauty in ordinary moments, one story at a time. 🌸</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#featured">Today's Posts</a></li>
+          <li><a href="#categories">Browse by Vibe</a></li>
+          <li><a href="#stories">Story Drops</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Vibes</h4>
+        <ul>
+          <li><a href="#">🌍 Travel Diaries</a></li>
+          <li><a href="#">☕ Café Moments</a></li>
+          <li><a href="#">💫 Motivation</a></li>
+          <li><a href="#">🔥 Trending Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">📸 Instagram</a></li>
+          <li><a href="#">🎬 YouTube</a></li>
+          <li><a href="#">📌 Pinterest</a></li>
+          <li><a href="#newsletter">💌 Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Everyday Vibes · Made with 💛 and lots of coffee ☕</p>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- ========== TOAST ========== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
